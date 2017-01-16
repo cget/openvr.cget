@@ -14,3 +14,5 @@ if(MSVC)
 endif()
 file(GLOB OPENVR_HEADERS "${CGET_openvr_REPO_DIR}/headers/*")               
 file(COPY ${OPENVR_HEADERS} DESTINATION "${CGET_INSTALL_DIR}/include")
+
+set(ARGS_NO_FIND_PACKAGE OFF)
