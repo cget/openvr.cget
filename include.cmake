@@ -1,7 +1,7 @@
 file(COPY "${REPO_DIR}/FindOpenVR.cmake" DESTINATION "${CGET_INSTALL_DIR}/lib/cmake")
 CGET_GET_PACKAGE(openvr GITHUB ValveSoftware/openvr)
 
-if(MSVC)
+if(MSVC OR MINGW)
     if(CGET_ARCH MATCHES "x64")
         file(GLOB OPENVR_DLLS "${CGET_openvr_REPO_DIR}/bin/win64/*")   
         file(GLOB OPENVR_LIBS "${CGET_openvr_REPO_DIR}/lib/win64/*")                
